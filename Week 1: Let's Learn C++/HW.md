@@ -1,8 +1,6 @@
-HW
+## Why C++ compiler round off the double value eg. 60.72699337 to 60.7270
 
-# Why C++ compiler round off the double value eg. 60.72699337 to 60.7270
-
-## Sol:
+### Sol:
 
 In C++, the way floating-point numbers are displayed when printed to the console is often controlled by the default precision setting. When you output a double value to the console using std::cout in C++, it may get rounded or displayed with a limited number of decimal places, depending on the default precision.
 
@@ -82,14 +80,14 @@ Then the error will occur
 
 ## How Data is stored in C++?
 
-# int:
+### int:
 Say, 25 is to be stored. Then its binary equivalent is 11001. 25 is integer, hence 4 bytes will be allocated to it.
 [00000000 00000000 00000000 00011001]
 If -25 is to be stored. Then we take its 2's Complement.
 (25)base10 = [00000000 00000000 00000000 00011001]
 => 1's complement => [11111111 11111111 11111111 11100110] => 2's complement => [11111111 11111111 11111111 11100111]
 
-# Char:
+### Char:
 In C/C++, char data type follows ASCIl codes, hence for each character there is mapped value. For eg. A= 65, a =97, etc.
 BY using char compiler understands 1 byte of memory is to be allocated and conversion occurs similarly like integer and remapped to the char.
 similarly, all the data types is stored.
