@@ -188,7 +188,6 @@ Here's a common use case for cin.fail(): when you attempt to read data of a spec
     } else {
         std::cout << "You entered: " << number << std::endl;
     }
-
     return 0;
  }
 </code>
@@ -203,4 +202,20 @@ Example 2: Invalid Input
 Enter an integer: abc
 Invalid input. Please enter a valid integer.
 
+## getline(cin, str)
+The getline() function in C++ is used to read a line of text from the input stream. The general syntax is getline(cin, str), where cin is the input stream (typically std::cin for standard input) and str is a string variable where the line of text will be stored.
 
+           #include <iostream>
+           #include <string>
+           int main() {
+               std::string input;
+
+                std::cout << "Enter a line of text: ";
+                // getline(cin, str) reads a line of text from cin into the string variable 'input'
+                std::getline(std::cin, input);
+                 std::cout << "You entered: " << input << std::endl;
+                return 0;
+            }
+In this example, std::getline(std::cin, input) reads a line of text from the standard input (cin) and stores it in the string variable input. The program then prints the entered text.
+
+If you want to limit the number of characters read, you can use the third argument, which specifies the delimiter. For example, std::getline(std::cin, input, '\n') reads characters until a newline character ('\n') is encountered.
