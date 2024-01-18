@@ -43,7 +43,7 @@ Here, std::setprecision(10) sets the precision to 10 decimal places. Adjust the 
 
 Both High level language and low level language are the programming languages’s types. The main difference between high level language and low level language is that, Programmers can easily understand or interpret or compile the high level language in comparison of machine. On the other hand, Machine can easily understand the low level language in comparison of human beings. Examples of high level languages are C, C++, Java, Python, etc. Let’s see the difference between high level and low level languages:
 
-<a href="https://www.geeksforgeeks.org/difference-between-high-level-and-low-level-languages/" target="_blank">GFG Doc</a>
+[GFG Doc](https://www.geeksforgeeks.org/difference-between-high-level-and-low-level-languages/)
 
 
 low level languages are much closer to machine code which is in the form of binary that makes it harder to understand but the memory allocation is highly efficient.
@@ -78,3 +78,20 @@ int main() {
 
 if we pass the 0 in function divide(10,0) like this
 Then the error will occur
+
+
+## How Data is stored in C++?
+
+# int:
+Say, 25 is to be stored. Then its binary equivalent is 11001. 25 is integer, hence 4 bytes will be allocated to it.
+[00000000 00000000 00000000 00011001]
+If -25 is to be stored. Then we take its 2's Complement.
+(25)base10 = [00000000 00000000 00000000 00011001]
+=> 1's complement => [11111111 11111111 11111111 11100110] => 2's complement => [11111111 11111111 11111111 11100111]
+
+# Char:
+In C/C++, char data type follows ASCIl codes, hence for each character there is mapped value. For eg. A= 65, a =97, etc.
+BY using char compiler understands 1 byte of memory is to be allocated and conversion occurs similarly like integer and remapped to the char.
+similarly, all the data types is stored.
+
+[en.wikipedia.org Doc](https://en.wikipedia.org/wiki/Computer_data_storage#:~:text=A%20modern%20digital%20computer%20represents,byte%2C%20equal%20to%208%20bits.)
