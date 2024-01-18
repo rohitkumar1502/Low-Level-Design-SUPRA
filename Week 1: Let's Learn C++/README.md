@@ -109,7 +109,7 @@ cout << "Binary Representation " << binaryRepresntation << endl;
 In C++, cin.ignore() is a function that is used to discard or ignore characters in the input buffer. It is often used after reading input using cin to clear any additional characters, such as newline characters, that may be left in the input buffer.
 
 The basic syntax is as follows:
-#include <iostream>
+#include `<iostream>`
 
 int main() {
 // some code that reads from cin
@@ -129,8 +129,8 @@ Here's an example:
  #include `<iostream>`
  int main()
   {
-  int n;
-  char delimiter;
+      int n;
+      char delimiter;
   
       std::cout << "Enter a number: ";
       std::cin >> n;
@@ -157,3 +157,46 @@ Here's an example:
   }
 
 If the user enters 123,456, the program will ignore the first 3 characters ('1', '2', '3') because n is set to 3, and it will stop ignoring characters when the delimiter (',') is encountered. The remaining input, '456', will be processed by the rest of the code.
+
+  Enter a number: 123
+  Enter a delimiter: ,
+  You entered: 123 and delimiter: ,
+  Remaining input after ignoring: 456
+
+## What is cin.fail()
+In C++, cin.fail() is a function that is used to check the state of the input stream (cin). It returns true if a previous input operation failed, and false otherwise.
+
+Here's a common use case for cin.fail(): when you attempt to read data of a specific type (e.g., an integer) from the standard input using cin, and the input does not match the expected type, the input stream enters a fail state. cin.fail() can then be used to check if the failure occurred.
+
+#include `<iostream>`
+
+int main() {
+    int number;
+
+    std::cout << "Enter an integer: ";
+    std::cin >> number;
+
+    if (std::cin.fail()) {
+        std::cout << "Invalid input. Please enter a valid integer." << std::endl;
+        // Clear the fail state to allow further input attempts
+        std::cin.clear();
+        // Ignore any remaining characters in the input buffer
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    } else {
+        std::cout << "You entered: " << number << std::endl;
+    }
+
+    return 0;
+}
+
+In this example, if the user enters a non-integer value (e.g., a character), cin.fail() will return true, and the program prints an error message. It also uses cin.clear() to clear the fail state, allowing further input attempts, and cin.ignore() to discard any remaining characters in the input buffer.
+
+Example 1: Valid Input
+Enter an integer: 42
+You entered: 42
+
+Example 2: Invalid Input
+Enter an integer: abc
+Invalid input. Please enter a valid integer.
+
+
