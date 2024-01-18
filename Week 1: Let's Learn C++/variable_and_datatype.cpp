@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bitset>
 using namespace std;
 int main()
 {
@@ -31,15 +32,24 @@ int main()
     // int age = 12;
     // cout << sizeof(age);
     // redifiniion
-    int age = 12;
-    {
-        int age = 13;
-    }
-    {
-        int age = 15;
-        {
-            int age = 17;
-        }
-    }
+    // int age = 12;
+    // {
+    //     int age = 13;
+    // }
+    // {
+    //     int age = 15;
+    //     {
+    //         int age = 17;
+    //     }
+    // }
+
+    // Decimal to Binary conversion
+    int decimalNum;
+    cout << "Enter Your Decimal Number Which one you want't to covert: ";
+    cin >> decimalNum;
+    bitset<32> binaryRepresntation(decimalNum);
+    cout << "Binary Representation " << binaryRepresntation << endl;
+
+    
     return 0;
 }

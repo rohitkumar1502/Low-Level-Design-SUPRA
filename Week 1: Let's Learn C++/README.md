@@ -93,3 +93,11 @@ BY using char compiler understands 1 byte of memory is to be allocated and conve
 similarly, all the data types is stored.
 
 [en.wikipedia.org Doc](https://en.wikipedia.org/wiki/Computer_data_storage#:~:text=A%20modern%20digital%20computer%20represents,byte%2C%20equal%20to%208%20bits.)
+
+## Decimal to Binary conversion
+ //include "bitset" Library
+    int decimalNum;
+    cout << "Enter Your Decimal Number Which one you want to covert: ";
+    cin >> decimalNum;
+    bitset<32> binaryRepresntation(decimalNum);
+    cout << "Binary Representation " << binaryRepresntation << endl;
