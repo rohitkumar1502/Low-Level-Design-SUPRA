@@ -4,7 +4,7 @@
 
 In C++, the way floating-point numbers are displayed when printed to the console is often controlled by the default precision setting. When you output a double value to the console using std::cout in C++, it may get rounded or displayed with a limited number of decimal places, depending on the default precision.
 
-        #include
+        #include<iostream>
 
         int main() {
             double value = 60.72399337;
@@ -51,18 +51,18 @@ c++ is considered as a balanced language which provides a balance between high l
 ## Return -1 in C++
 
 In C++, the return -1; statement is commonly used to indicate an error or failure in a function that returns an integer. When a function encounters an error condition, it can return -1 (or any other negative value) to signal that something went wrong.
+<code>
+       int divide(int a, int b) {
+       if (b == 0) {
+       // Error: Division by zero
+       return -1;
+       } else {
+       return a / b;
+     }
+   }
 
-int divide(int a, int b) {
-if (b == 0) {
-// Error: Division by zero
-return -1;
-} else {
-return a / b;
-}
-}
-
-int main() {
-int result = divide(10, 2);
+    int main() {
+    int result = divide(10, 2);
 
     if (result == -1) {
         std::cout << "Error: Division by zero occurred." << std::endl;
@@ -72,7 +72,8 @@ int result = divide(10, 2);
 
     return 0;
 
-}
+  }
+</code>
 
 if we pass the 0 in function divide(10,0) like this
 Then the error will occur
@@ -170,11 +171,11 @@ In C++, cin.fail() is a function that is used to check the state of the input st
 
 Here's a common use case for cin.fail(): when you attempt to read data of a specific type (e.g., an integer) from the standard input using cin, and the input does not match the expected type, the input stream enters a fail state. cin.fail() can then be used to check if the failure occurred.
 <code>
-    #include `<iostream>`
 
+
+    #include `<iostream>`
     int main() {
     int number;
-
     std::cout << "Enter an integer: ";
     std::cin >> number;
 
