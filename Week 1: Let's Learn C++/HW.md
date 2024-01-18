@@ -43,7 +43,7 @@ Here, std::setprecision(10) sets the precision to 10 decimal places. Adjust the 
 
 Both High level language and low level language are the programming languages’s types. The main difference between high level language and low level language is that, Programmers can easily understand or interpret or compile the high level language in comparison of machine. On the other hand, Machine can easily understand the low level language in comparison of human beings. Examples of high level languages are C, C++, Java, Python, etc. Let’s see the difference between high level and low level languages:
 
-[GFG Doc](https://www.geeksforgeeks.org/difference-between-high-level-and-low-level-languages/)
+[GFG Doc](https://www.geeksforgeeks.org/difference-between-high-level-and-low-level-languages/){:target="_blank"}
 
 
 low level languages are much closer to machine code which is in the form of binary that makes it harder to understand but the memory allocation is highly efficient.
