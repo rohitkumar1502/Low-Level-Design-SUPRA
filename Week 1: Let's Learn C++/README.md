@@ -126,33 +126,34 @@ For example, cin.ignore(n) will ignore the next 'n' characters in the input buff
 
 Here's an example:
 
-#include `<iostream>`
-int main() {
-int n;
-char delimiter;
-
-    std::cout << "Enter a number: ";
-    std::cin >> n;
-
-    std::cout << "Enter a delimiter: ";
-    std::cin >> delimiter;
-
-    std::cout << "You entered: " << n << " and delimiter: " << delimiter << std::endl;
-
-    // Ignore n characters or until the delimiter is encountered
-    std::cin.ignore(n, delimiter);
-
-    std::cout << "Remaining input after ignoring: ";
-
-    char remainingChar;
-    while (std::cin.get(remainingChar)) {
-        std::cout << remainingChar;
-    }
-
-    std::cout << std::endl;
-
-    return 0;
-
-}
+ #include `<iostream>`
+ int main()
+  {
+  int n;
+  char delimiter;
+  
+      std::cout << "Enter a number: ";
+      std::cin >> n;
+  
+      std::cout << "Enter a delimiter: ";
+      std::cin >> delimiter;
+  
+      std::cout << "You entered: " << n << " and delimiter: " << delimiter << std::endl;
+  
+      // Ignore n characters or until the delimiter is encountered
+      std::cin.ignore(n, delimiter);
+  
+      std::cout << "Remaining input after ignoring: ";
+  
+      char remainingChar;
+      while (std::cin.get(remainingChar)) {
+          std::cout << remainingChar;
+      }
+  
+      std::cout << std::endl;
+  
+      return 0;
+  
+  }
 
 If the user enters 123,456, the program will ignore the first 3 characters ('1', '2', '3') because n is set to 3, and it will stop ignoring characters when the delimiter (',') is encountered. The remaining input, '456', will be processed by the rest of the code.
