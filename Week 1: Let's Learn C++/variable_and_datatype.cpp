@@ -17,17 +17,29 @@ int main()
     // age = 26;
     // cout<< age <<endl;
 
-    int count = 5;
-    float shere = 3.04;
-    char alpha = 'A';
-    double wqeight = 60.72699337;
-    bool isMale = true; // false or 1 and 0
+    // int count = 5;
+    // float shere = 3.04;
+    // char alpha = 'A';
+    // double wqeight = 60.72699337;
+    // bool isMale = true; // false or 1 and 0
 
-    cout << count << endl;
-    cout << shere << endl;
-    cout << alpha << endl;
-    cout << wqeight << endl;
-    cout << isMale <<endl;
-
+    // cout << count << endl;
+    // cout << shere << endl;
+    // cout << alpha << endl;
+    // cout << wqeight << endl;
+    // cout << isMale << endl;
+    // int age = 12;
+    // cout << sizeof(age);
+    // redifiniion
+    int age = 12;
+    {
+        int age = 13;
+    }
+    {
+        int age = 15;
+        {
+            int age = 17;
+        }
+    }
     return 0;
 }
