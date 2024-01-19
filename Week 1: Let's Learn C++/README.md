@@ -219,3 +219,7 @@ The getline() function in C++ is used to read a line of text from the input stre
 In this example, std::getline(std::cin, input) reads a line of text from the standard input (cin) and stores it in the string variable input. The program then prints the entered text.
 
 If you want to limit the number of characters read, you can use the third argument, which specifies the delimiter. For example, std::getline(std::cin, input, '\n') reads characters until a newline character ('\n') is encountered.
+
+## Why we don't use case " "
+
+Cannot use non-constant expressions, floating-point numbers, strings, objects, or variable declarations. The case labels must be constants integral or enumeration and also we can't add the declaration of any variable
