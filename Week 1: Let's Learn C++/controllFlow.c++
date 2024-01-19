@@ -35,25 +35,33 @@ int main()
     //     cout<<"Grade is D"<<endl;
     // }
 
-    //Nested id
-    int height;
-    cout<<"Enter the Height: "<<endl;
-    cin>>height;
+    // //Nested id
+    // int height;
+    // cout<<"Enter the Height: "<<endl;
+    // cin>>height;
 
-    int weight;
-    cout<<"Enter the weightL "<<endl;
-    cin>>weight;
-    if(height>5.5){
-        if(weight>80){
-            cout<<"You have good BMI"<<endl;
-        }
-        else{
-            cout<<"Man go for Exercise"<<endl;
-        }
-    }
-    else{
-        cout<<"man go for Running on the dailly basis"<<endl;
-    }
+    // int weight;
+    // cout<<"Enter the weightL "<<endl;
+    // cin>>weight;
+    // if(height>5.5){
+    //     if(weight>80){
+    //         cout<<"You have good BMI"<<endl;
+    //     }
+    //     else{
+    //         cout<<"Man go for Exercise"<<endl;
+    //     }
+    // }
+    // else{
+    //     cout<<"man go for Running on the dailly basis"<<endl;
+    // }
+
+    // ternary operator
+    // int age = 10;
+    // (age > 18) ? cout << "You can Vote" : cout << "You can't Vote";
+    int x = 10;
+    int y = 20;
+    int result = (x > y) ? x : y;
+    cout<<"Greater Number is : "<<result<<endl;
 
     return 0;
 }

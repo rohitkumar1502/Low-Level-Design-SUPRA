@@ -223,3 +223,13 @@ If you want to limit the number of characters read, you can use the third argume
 ## Why we don't use case " "
 
 Cannot use non-constant expressions, floating-point numbers, strings, objects, or variable declarations. The case labels must be constants integral or enumeration and also we can't add the declaration of any variable
+
+## <code>for(; ;)</code> How It's Work
+
+                      int i =51;
+                      for(; ;){
+                        if(i<91){
+                          cout<<i<<endl;
+                           i++;
+                        }
+                     }
