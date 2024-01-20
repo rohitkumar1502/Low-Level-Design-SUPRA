@@ -89,5 +89,37 @@ int main()
     //     cout<<ch<<endl;
     // }
 
+    // do while loop
+
+    // int i = 1;
+    // do{
+    //     cout<<"print at list one time : "<<i<<endl;
+    //     i++;
+    // }while(i<=1);
+
+    // Nested for loop
+    // for(int i = 0; i<4; i++){
+    //     for(int j = 0; j<4; j++){
+    //         cout<<"i: "<<i<<" "<<"j: "<<j<<endl;
+    //     }
+    // }
+
+    // HW 
+    // What Happen When you write for loop like this 
+    // for(int i =0; i<5; i++); // warning: for loop has empty body [-Wempty-body]
+    // {
+    //   cout<<i<<endl; // error: use of undeclared identifier 'i'
+    // }
+
+    // int i;
+    // if(cin>>i){
+    //     cout<<i<<endl;   // print i the value
+    // }
+    int i;
+    if(cout<<"Rohit "){
+        cout<<"kemar";   // printing both char cout 
+    }
+
+
     return 0;
 }

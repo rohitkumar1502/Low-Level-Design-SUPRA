@@ -254,3 +254,24 @@ Cannot use non-constant expressions, floating-point numbers, strings, objects, o
                    for(char ch = 'a'; ch <= 'z'; ch++){
                        cout<<ch<<endl;
                    }
+
+## What Happen When you write for loop like this 
+
+                 for(int i =0; i<5; i++); // warning: for loop has empty body [-Wempty-body]
+                 {
+                   cout<<i<<endl; // error: use of undeclared identifier 'i'
+                 }
+
+
+
+                 int i;
+                 if(cin>>i){
+                 cout<<i<<endl;   // print i the value
+                 }
+
+
+
+                  int i;
+                  if(cout<<"Rohit "){
+                      cout<<"kemar";   // printing both char cout 
+                  }
