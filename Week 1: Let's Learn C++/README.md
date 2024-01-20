@@ -5,12 +5,9 @@
 In C++, the way floating-point numbers are displayed when printed to the console is often controlled by the default precision setting. When you output a double value to the console using std::cout in C++, it may get rounded or displayed with a limited number of decimal places, depending on the default precision.
 
         #include<iostream>
-
         int main() {
             double value = 60.72399337;
-
             std::cout << "Default precision: " << value << std::endl;
-
             return 0;
         }
 
@@ -22,12 +19,9 @@ The default precision for displaying floating-point values is usually limited to
 
             #include
             #include
-
             int main() {
                 double value = 60.72399337;
-
                 std::cout << "Custom precision: " << std::setprecision(10) << value << std::endl;
-
                 return 0;
             }
 
@@ -51,29 +45,25 @@ c++ is considered as a balanced language which provides a balance between high l
 ## Return -1 in C++
 
 In C++, the return -1; statement is commonly used to indicate an error or failure in a function that returns an integer. When a function encounters an error condition, it can return -1 (or any other negative value) to signal that something went wrong.
-<code>
-       int divide(int a, int b) {
-       if (b == 0) {
-       // Error: Division by zero
-       return -1;
-       } else {
-       return a / b;
-     }
-   }
 
-    int main() {
-    int result = divide(10, 2);
-
-    if (result == -1) {
-        std::cout << "Error: Division by zero occurred." << std::endl;
-    } else {
-        std::cout << "Result: " << result << std::endl;
-    }
-
-    return 0;
-
-  }
-</code>
+                    int divide(int a, int b) {
+                    if (b == 0) {
+                    // Error: Division by zero
+                    return -1;
+                    } else {
+                    return a / b;
+                  }
+                }
+                 int main() {
+                 int result = divide(10, 2);
+                 if (result == -1) {
+                     std::cout << "Error: Division by zero occurred." << std::endl;
+                 } else {
+                     std::cout << "Result: " << result << std::endl;
+                 }
+                 return 0;
+               }
+             </code>
 
 if we pass the 0 in function divide(10,0) like this
 Then the error will occur
@@ -110,87 +100,74 @@ cout << "Binary Representation " << binaryRepresntation << endl;
 In C++, cin.ignore() is a function that is used to discard or ignore characters in the input buffer. It is often used after reading input using cin to clear any additional characters, such as newline characters, that may be left in the input buffer.
 
 The basic syntax is as follows:
-<code>
-       #include `<iostream>`
 
-       int main() {
-       // some code that reads from cin
+                 #include `<iostream>`
+                 int main() {
+                 // some code that reads from cin
+                 cin.ignore(); // Ignores one character in the input buffer
+               // rest of the code
+                 return 0;
+               }
 
-       cin.ignore(); // Ignores one character in the input buffer
-
-     // rest of the code
-       return 0;
-
-}
-</code>
 It's important to note that cin.ignore() without any arguments ignores only one character. If you want to ignore a specific number of characters or until a specific delimiter, you can provide additional arguments.
 
 For example, cin.ignore(n) will ignore the next 'n' characters in the input buffer. And cin.ignore(n, delimiter) will ignore up to 'n' characters or until the specified delimiter is encountered.
 
 Here's an example:
-<code>
- #include `<iostream>`
- int main()
-  {
-      int n;
-      char delimiter;
-  
-      std::cout << "Enter a number: ";
-      std::cin >> n;
-  
-      std::cout << "Enter a delimiter: ";
-      std::cin >> delimiter;
-  
-      std::cout << "You entered: " << n << " and delimiter: " << delimiter << std::endl;
-  
-      // Ignore n characters or until the delimiter is encountered
-      std::cin.ignore(n, delimiter);
-  
-      std::cout << "Remaining input after ignoring: ";
-  
-      char remainingChar;
-      while (std::cin.get(remainingChar)) {
-          std::cout << remainingChar;
-      }
-  
-      std::cout << std::endl;
-  
-      return 0;
-  
-  }
-</code>
+
+              #include `<iostream>`
+              int main()
+               {
+                   int n;
+                   char delimiter;
+                   std::cout << "Enter a number: ";
+                   std::cin >> n;
+                   std::cout << "Enter a delimiter: ";
+                   std::cin >> delimiter;
+                   std::cout << "You entered: " << n << " and delimiter: " << delimiter << std::endl;
+                   // Ignore n characters or until the delimiter is encountered
+                   std::cin.ignore(n, delimiter);
+                   std::cout << "Remaining input after ignoring: ";
+                   char remainingChar;
+                   while (std::cin.get(remainingChar)) {
+                       std::cout << remainingChar;
+                   }
+                   std::cout << std::endl;
+                   return 0;
+               }
+
 If the user enters 123,456, the program will ignore the first 3 characters ('1', '2', '3') because n is set to 3, and it will stop ignoring characters when the delimiter (',') is encountered. The remaining input, '456', will be processed by the rest of the code.
 
-  Enter a number: 123
-  Enter a delimiter: ,
-  You entered: 123 and delimiter: ,
-  Remaining input after ignoring: 456
+              Enter a number: 123
+              Enter a delimiter: ,
+              You entered: 123 and delimiter: ,
+              Remaining input after ignoring: 456
 
 ## What is cin.fail()
 In C++, cin.fail() is a function that is used to check the state of the input stream (cin). It returns true if a previous input operation failed, and false otherwise.
 
 Here's a common use case for cin.fail(): when you attempt to read data of a specific type (e.g., an integer) from the standard input using cin, and the input does not match the expected type, the input stream enters a fail state. cin.fail() can then be used to check if the failure occurred.
-<code>
 
 
-    #include `<iostream>`
-    int main() {
-    int number;
-    std::cout << "Enter an integer: ";
-    std::cin >> number;
 
-    if (std::cin.fail()) {
-        std::cout << "Invalid input. Please enter a valid integer." << std::endl;
-        // Clear the fail state to allow further input attempts
-        std::cin.clear();
-        // Ignore any remaining characters in the input buffer
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    } else {
-        std::cout << "You entered: " << number << std::endl;
-    }
-    return 0;
- }
-</code>
+                         #include `<iostream>`
+                         int main() {
+                         int number;
+                         std::cout << "Enter an integer: ";
+                         std::cin >> number;
+
+                         if (std::cin.fail()) {
+                             std::cout << "Invalid input. Please enter a valid integer." << std::endl;
+                             // Clear the fail state to allow further input attempts
+                             std::cin.clear();
+                             // Ignore any remaining characters in the input buffer
+                             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                             } else {
+                             std::cout << "You entered: " << number << std::endl;
+                         }
+                         return 0;
+                      }
+
 
 In this example, if the user enters a non-integer value (e.g., a character), cin.fail() will return true, and the program prints an error message. It also uses cin.clear() to clear the fail state, allowing further input attempts, and cin.ignore() to discard any remaining characters in the input buffer.
 
