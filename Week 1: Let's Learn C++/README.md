@@ -46,23 +46,23 @@ c++ is considered as a balanced language which provides a balance between high l
 
 In C++, the return -1; statement is commonly used to indicate an error or failure in a function that returns an integer. When a function encounters an error condition, it can return -1 (or any other negative value) to signal that something went wrong.
 
-                    int divide(int a, int b) {
-                    if (b == 0) {
-                    // Error: Division by zero
-                    return -1;
-                    } else {
-                    return a / b;
-                  }
+                int divide(int a, int b) {
+                if (b == 0) {
+                // Error: Division by zero
+                return -1;
+                } else {
+                return a / b;
                 }
-                 int main() {
-                 int result = divide(10, 2);
-                 if (result == -1) {
-                     std::cout << "Error: Division by zero occurred." << std::endl;
-                 } else {
-                     std::cout << "Result: " << result << std::endl;
-                 }
-                 return 0;
-               }
+              }
+                int main() {
+                int result = divide(10, 2);
+                if (result == -1) {
+                    std::cout << "Error: Division by zero occurred." << std::endl;
+                } else {
+                    std::cout << "Result: " << result << std::endl;
+                }
+                return 0;
+                }
              </code>
 
 if we pass the 0 in function divide(10,0) like this
@@ -210,3 +210,47 @@ Cannot use non-constant expressions, floating-point numbers, strings, objects, o
                            i++;
                         }
                      }
+
+## Loops
+
+                  //print 1 to 100
+                   for (int i = 1; i <= 100; i++)
+                   {
+                       cout << i;
+                   }
+
+                  // 100 to 1
+                   int i =100;
+                   while(i>=1){
+                       cout<<i;
+                       i--;
+                   }
+
+                   //Name 50 Times
+                   int i = 1;
+                   while (i<51)
+                   {
+                       cout<<"Number: "<<i<<" Rohit Kumar"<<endl;
+                       i++;
+                   }
+    
+                   //print 0 to -10 
+                   for(int i = 0; i > -11; i--){
+                       cout<<i<<endl;
+                   }
+
+                   //7 ka Table 
+                   for(int i = 1; i < 11; i++){
+                       cout<<7*i<<endl;
+                   }
+
+                  //   A to Z 
+                   for(char ch = 'A'; ch<='Z'; ch++){
+                       cout<<ch<<endl;
+                   }
+
+                   //a to z 
+
+                   for(char ch = 'a'; ch <= 'z'; ch++){
+                       cout<<ch<<endl;
+                   }

@@ -1,7 +1,7 @@
-  for(int i = 0; i<10; i++){
-        if(i == 5){
-            break;
-        }
-        cout<<i<<endl;
-
-    }
+ // int i = 1;
+    // while (i<51)
+    // {
+    //     cout<<"Number: "<<i<<" Rohit Kumar"<<endl;
+    //     i++;
+    // }
+    
