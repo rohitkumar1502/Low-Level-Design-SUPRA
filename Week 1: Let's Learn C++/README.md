@@ -275,3 +275,44 @@ Cannot use non-constant expressions, floating-point numbers, strings, objects, o
                   if(cout<<"Rohit "){
                       cout<<"kemar";   // printing both char cout 
                   }
+
+## Can we apply Bitwise operator on every datatype
+In C++, you can perform bitwise operations on integer types, but attempting to perform bitwise operations on different data types directly may lead to unexpected results or errors. Bitwise operations are typically performed on integral types like int, unsigned int, char, etc.
+
+For example, you can perform bitwise AND (&), bitwise OR (|), bitwise XOR (^), left shift (<<), and right shift (>>) operations on integer types. Here's an example:
+
+Here I used int & int, char & char like that
+
+            // for int
+             int a = 5;
+             int b = 6;
+             cout<<(a & b)<<endl;
+            // for long
+            long a = 535543;
+            long b = 292424;
+            cout<<(a | b)<<endl;
+
+           //for short
+           short a = 53;
+           short b = 29;
+           cout<<(a | b)<<endl;
+     
+           // char 
+
+           char ch1 = 'c';
+           char ch2 = 'd';
+           cout<<(ch1 | ch2)<<endl;
+
+Attempting to perform bitwise operations on different types, like mixing an integer with a floating-point type, may lead to unexpected results or errors. If you need to manipulate individual bits in non-integer types, you may need to use type casting or other techniques to achieve your goal. Always be cautious when working with bitwise operations and ensure that the types involved are appropriate for the desired operations.
+
+
+## Can we do % operation on float datatype
+No, expression must have integral or unscoped enum type
+
+eg. 
+          float a = 4.9;
+          float b = 6.2;
+          cout << (b % a) << endl;
+
+          error: invalid operands to binary expression ('float' and 'float')
+
