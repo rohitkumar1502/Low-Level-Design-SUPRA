@@ -310,9 +310,10 @@ Attempting to perform bitwise operations on different types, like mixing an inte
 No, expression must have integral or unscoped enum type
 
 eg. 
-          float a = 4.9;
-          float b = 6.2;
-          cout << (b % a) << endl;
 
-          error: invalid operands to binary expression ('float' and 'float')
+               float a = 4.9;
+               float b = 6.2;
+               cout << (b % a) << endl;
+
+               error: invalid operands to binary expression ('float' and 'float')
 
