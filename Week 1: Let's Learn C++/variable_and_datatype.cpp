@@ -47,7 +47,7 @@ int main()
     int decimalNum;
     cout << "Enter Your Decimal Number Which one you want't to covert: ";
     cin >> decimalNum;
-    bitset<32> binaryRepresntation(decimalNum);
+    bitset<8> binaryRepresntation(decimalNum);
     cout << "Binary Representation " << binaryRepresntation << endl;
 
     

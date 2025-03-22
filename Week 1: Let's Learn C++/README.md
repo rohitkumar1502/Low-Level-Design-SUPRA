@@ -1,3 +1,22 @@
+## std::cout
+
+alternative for using the standard library by "using namespace std;"
+
+Note: 
+int----signed -> 2^n-1 to (2n-1)-1
+   ---- unsigned -> 0 to 2^n -1
+
+## Preprocessor directive in C++?
+
+A preprocessor directive in C++ is a command that starts with # and is processed before the actual compilation. It is used to include files, define macros, and control compilation conditions.
+
+Common Preprocessor Directives:
+#include – Adds header files (e.g., #include <iostream>).
+#define – Defines macros (e.g., #define PI 3.14).
+#ifdef, #ifndef, #endif – Conditional compilation.
+#pragma – Special compiler instructions.
+These directives help in managing code efficiently before compilation begins.
+
 ## Why C++ compiler round off the double value eg. 60.72699337 to 60.7270
 
 ### Sol:
@@ -138,17 +157,16 @@ Here's an example:
 
 If the user enters 123,456, the program will ignore the first 3 characters ('1', '2', '3') because n is set to 3, and it will stop ignoring characters when the delimiter (',') is encountered. The remaining input, '456', will be processed by the rest of the code.
 
-              Enter a number: 123
-              Enter a delimiter: ,
-              You entered: 123 and delimiter: ,
-              Remaining input after ignoring: 456
+Enter a number: 123
+         Enter a delimiter: ,
+         You entered: 123 and delimiter: ,
+         Remaining input after ignoring: 456
 
 ## What is cin.fail()
+
 In C++, cin.fail() is a function that is used to check the state of the input stream (cin). It returns true if a previous input operation failed, and false otherwise.
 
 Here's a common use case for cin.fail(): when you attempt to read data of a specific type (e.g., an integer) from the standard input using cin, and the input does not match the expected type, the input stream enters a fail state. cin.fail() can then be used to check if the failure occurred.
-
-
 
                          #include `<iostream>`
                          int main() {
@@ -168,7 +186,6 @@ Here's a common use case for cin.fail(): when you attempt to read data of a spec
                          return 0;
                       }
 
-
 In this example, if the user enters a non-integer value (e.g., a character), cin.fail() will return true, and the program prints an error message. It also uses cin.clear() to clear the fail state, allowing further input attempts, and cin.ignore() to discard any remaining characters in the input buffer.
 
 Example 1: Valid Input
@@ -180,6 +197,7 @@ Enter an integer: abc
 Invalid input. Please enter a valid integer.
 
 ## getline(cin, str)
+
 The getline() function in C++ is used to read a line of text from the input stream. The general syntax is getline(cin, str), where cin is the input stream (typically std::cin for standard input) and str is a string variable where the line of text will be stored.
 
            #include <iostream>
@@ -193,6 +211,7 @@ The getline() function in C++ is used to read a line of text from the input stre
                  std::cout << "You entered: " << input << std::endl;
                 return 0;
             }
+
 In this example, std::getline(std::cin, input) reads a line of text from the standard input (cin) and stores it in the string variable input. The program then prints the entered text.
 
 If you want to limit the number of characters read, you can use the third argument, which specifies the delimiter. For example, std::getline(std::cin, input, '\n') reads characters until a newline character ('\n') is encountered.
@@ -233,29 +252,29 @@ Cannot use non-constant expressions, floating-point numbers, strings, objects, o
                        cout<<"Number: "<<i<<" Rohit Kumar"<<endl;
                        i++;
                    }
-    
-                   //print 0 to -10 
+
+                   //print 0 to -10
                    for(int i = 0; i > -11; i--){
                        cout<<i<<endl;
                    }
 
-                   //7 ka Table 
+                   //7 ka Table
                    for(int i = 1; i < 11; i++){
                        cout<<7*i<<endl;
                    }
 
-                  //   A to Z 
+                  //   A to Z
                    for(char ch = 'A'; ch<='Z'; ch++){
                        cout<<ch<<endl;
                    }
 
-                   //a to z 
+                   //a to z
 
                    for(char ch = 'a'; ch <= 'z'; ch++){
                        cout<<ch<<endl;
                    }
 
-## What Happen When you write for loop like this 
+## What Happen When you write for loop like this
 
                  for(int i =0; i<5; i++); // warning: for loop has empty body [-Wempty-body]
                  {
@@ -273,10 +292,11 @@ Cannot use non-constant expressions, floating-point numbers, strings, objects, o
 
                   int i;
                   if(cout<<"Rohit "){
-                      cout<<"kemar";   // printing both char cout 
+                      cout<<"kemar";   // printing both char cout
                   }
 
 ## Can we apply Bitwise operator on every datatype
+
 In C++, you can perform bitwise operations on integer types, but attempting to perform bitwise operations on different data types directly may lead to unexpected results or errors. Bitwise operations are typically performed on integral types like int, unsigned int, char, etc.
 
 For example, you can perform bitwise AND (&), bitwise OR (|), bitwise XOR (^), left shift (<<), and right shift (>>) operations on integer types. Here's an example:
@@ -296,8 +316,8 @@ Here I used int & int, char & char like that
            short a = 53;
            short b = 29;
            cout<<(a | b)<<endl;
-     
-           // char 
+
+           // char
 
            char ch1 = 'c';
            char ch2 = 'd';
@@ -305,15 +325,14 @@ Here I used int & int, char & char like that
 
 Attempting to perform bitwise operations on different types, like mixing an integer with a floating-point type, may lead to unexpected results or errors. If you need to manipulate individual bits in non-integer types, you may need to use type casting or other techniques to achieve your goal. Always be cautious when working with bitwise operations and ensure that the types involved are appropriate for the desired operations.
 
-
 ## Can we do % operation on float datatype
+
 No, expression must have integral or unscoped enum type
 
-eg. 
+eg.
 
                float a = 4.9;
                float b = 6.2;
                cout << (b % a) << endl;
 
                error: invalid operands to binary expression ('float' and 'float')
-
